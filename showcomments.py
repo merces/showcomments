@@ -1,3 +1,5 @@
+# Skeleton based on https://github.com/x64dbg/x64dbgida/blob/master/x64dbgida.py - thanks for that :)
+
 from idaapi import PluginForm
 from PyQt5 import QtCore, QtGui, QtWidgets
 import idautils
@@ -63,7 +65,7 @@ class ShowComments(PluginForm):
 class showcomments_plugin_t(idaapi.plugin_t):
     comment = "ShowComments"
     version = "v0.2"
-    website = "https://github.com/merces"
+    website = "https://github.com/merces/showcomments"
     help = ""
     wanted_name = "ShowComments"
     wanted_hotkey = "Ctrl-Alt-C"

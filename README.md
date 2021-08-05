@@ -21,10 +21,13 @@ Select an `IDA View` tab in IDA and go to `Edit->Plugins->ShowComments` or just 
 ## FAQ
 
 1. How can I only show the user added comments?
+
 I found no way in IDA to filter these comments. A workaround is to always set repeatable comments and use ShowComments to sort by them.
 
 2. Does it recognize function comments?
+
 No. If you know how to do this programatically, please let me know.
 
 3. What IDA versions are supported?
+
 I've only tested with 7.6. Please, let me know if it works with a different version.
