@@ -26,8 +26,8 @@ I found no way in IDA to filter these comments. A workaround is to always set re
 
 2. Does it recognize function comments?
 
-No. If you know how to do this programatically, please let me know.
+Yes
 
 3. What IDA versions are supported?
 
-I've only tested with 7.6. Please, let me know if it works with a different version.
+I've only tested with 7.5 and 7.6. Please, let me know if it works with a different version.
