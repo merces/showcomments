@@ -30,4 +30,4 @@ Yes
 
 3. What IDA versions are supported?
 
-I've only tested with 7.5 and 7.6. Please, let me know if it works with a different version.
+I've only tested with 7.5 - 7.7sp1. Please, let me know if it works with a different version.
