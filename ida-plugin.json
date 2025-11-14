@@ -1,0 +1,22 @@
+{
+  "IDAMetadataDescriptorVersion": 1,
+  "plugin": {
+    "name": "ShowComments",
+    "entryPoint": "showcomments.py",
+    "version": "0.5.0",
+    "idaVersions": ["9.1", "9.2"],
+    "description": "IDA Pro plugin that shows comments in a database",
+    "license": "GPL-3.0-or-later",
+    "categories": [
+      "ui-ux-and-visualization"
+    ],
+    "urls": {
+      "repository": "https://github.com/merces/showcomments"
+    },
+    "authors": [{
+      "name": "Fernando Mercês",
+      "email": "@mer0x36.bsky.social"
+    }],
+    "keywords": ["comments", "comment"]
+  }
+}
