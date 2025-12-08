@@ -5,6 +5,11 @@ import idautils
 import idaapi
 import idc
 
+try:
+    from QtCore import QVariant
+except ImportError:
+    QVariant = lambda *args: None if len(args) == 0 else args[0]
+
 class Comment:
     def __init__(self, address, comment_type, comment, function_name):
         self.address = address
@@ -27,7 +32,7 @@ class CommentTableModel(QtCore.QAbstractTableModel):
 
     def data(self, index, role=QtCore.Qt.DisplayRole):
         if (not index.isValid()) or (role != QtCore.Qt.DisplayRole):
-            return QtCore.QVariant()
+            return QVariant()
         
         comment = self.table_data[index.row()]
         match index.column():
@@ -40,14 +45,14 @@ class CommentTableModel(QtCore.QAbstractTableModel):
             case 3:
                 return comment.function_name
             case _:
-                return QtCore.QVariant()
+                return QVariant()
 
     def dataAt(self, index):
         return self.table_data[index.row()]
 
     def headerData(self, column, orientation, role):
         if (orientation != QtCore.Qt.Horizontal) or (role != QtCore.Qt.DisplayRole):
-            return QtCore.QVariant()
+            return QVariant()
         
         match column:
             case 0:
@@ -59,7 +64,7 @@ class CommentTableModel(QtCore.QAbstractTableModel):
             case 3:
                 return "Function Name"
             case _:
-                return QtCore.QVariant()
+                return QVariant()
 
     def rowCount(self, parent=QtCore.QModelIndex()):
         return len(self.table_data)
