@@ -4,9 +4,10 @@
     "name": "showcomments",
     "entryPoint": "showcomments.py",
     "version": "0.5.2",
-    "idaVersions": ["9.1", "9.2", "9.3"],
+    "idaVersions": ">=9.2",
     "description": "IDA Pro plugin to display and search comments in the database",
     "license": "GPL-3.0-or-later",
+    "logoPath": "./assets/logo.png",
     "categories": [
       "ui-ux-and-visualization"
     ],
