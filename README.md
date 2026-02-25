@@ -20,7 +20,7 @@ Alternatively, copy `showcomments.py` to the `plugins` directory under your IDA 
 
 From an IDA View, Hex View, or Pseudocode window, go to **Edit ▸ Plugins ▸ ShowComments** or press `Ctrl+Alt+C`.
 
-![Demo](showcomments.gif)
+![Screenshot](/assets/showcomments.png)
 
 ## Features
 
@@ -39,4 +39,4 @@ As a workaround, you can use repeatable comments consistently and then sort by t
 
 ### 2. Which IDA versions are supported?
 
-The plugin has been tested with IDA versions >= 9.1. It may work with other versions, but this has not been verified.
+The plugin has been tested with IDA versions >= 9.2. It may work with other versions, but this has not been verified.
