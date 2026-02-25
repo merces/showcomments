@@ -4,7 +4,13 @@ IDA Pro plugin that shows comments in a database
 
 ## Installation
 
-Copy `showcomments.py` to `plugins` folder under IDA Pro installation path or IDA Pro user path.
+The recommended way is to use [hcli](https://hcli.docs.hex-rays.com/getting-started/installation/) tool:
+
+```shell
+hcli plugin install ShowComments
+```
+
+Alternatively, you can copy `showcomments.py` to `plugins` folder under IDA Pro installation path or IDA Pro user path.
 
 # Usage
 
