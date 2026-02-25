@@ -20,6 +20,8 @@ class Comment:
         self.function_name = function_name
 
 class CommentTableModel(QtCore.QAbstractTableModel):
+    columns = ["Address", "Type", "Comment", "Function Name"]
+
     def __init__(self, parent=None, *args):
         super(CommentTableModel, self).__init__()
         self.table_data = []
@@ -30,7 +32,7 @@ class CommentTableModel(QtCore.QAbstractTableModel):
         self.endInsertRows()
 
     def columnCount(self, parent=QtCore.QModelIndex()):
-        return 4
+        return len(self.columns)
 
     def data(self, index, role=QtCore.Qt.DisplayRole):
         if (not index.isValid()) or (role != QtCore.Qt.DisplayRole):
@@ -56,17 +58,10 @@ class CommentTableModel(QtCore.QAbstractTableModel):
         if (orientation != QtCore.Qt.Horizontal) or (role != QtCore.Qt.DisplayRole):
             return QVariant()
         
-        match column:
-            case 0:
-                return "Address"
-            case 1:
-                return "Type"
-            case 2:
-                return "Comment"
-            case 3:
-                return "Function Name"
-            case _:
-                return QVariant()
+        if 0 <= column <= len(self.columns):
+            return self.columns[column]
+        
+        return QVariant()
 
     def rowCount(self, parent=QtCore.QModelIndex()):
         return len(self.table_data)
