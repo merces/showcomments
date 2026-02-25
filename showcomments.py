@@ -6,7 +6,6 @@ import idautils
 import idc
 from idaapi import PluginForm
 
-
 try:
     from QtCore import QVariant
 except ImportError:
@@ -159,10 +158,16 @@ class ShowComments(PluginForm):
         self.table.horizontalHeader().setStretchLastSection(True)
 
     def fn_get_cell_Value(self, index):
-        # If the user clicked an address, follow it in IDA View
-        if index.column() == 0:
-            value = index.data()
-            ida_kernwin.jumpto(int(value, base=16))
+        col = index.column()
+
+        if col == 0 or col == 2:
+            row = index.row()
+            addr_idx = index.model().index(row, 0)
+            
+            try:
+                ida_kernwin.jumpto(int(addr_idx.data(), 16))
+            except Exception:
+                pass
  
     def OnClose(self, form):
         pass
