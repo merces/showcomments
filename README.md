@@ -1,39 +1,40 @@
+![](/assets/logo.png)
+
 # ShowComments
 
-IDA Pro plugin that shows comments in a database
+IDA Pro plugin to display and search comments in the database.
 
 ## Installation
 
-The recommended way is to use [hcli](https://hcli.docs.hex-rays.com/getting-started/installation/) tool:
+The recommended way is to use the [hcli](https://hcli.docs.hex-rays.com/getting-started/installation/) tool:
 
 ```shell
-hcli plugin install ShowComments
+hcli plugin install showcomments
 ```
 
-Alternatively, you can copy `showcomments.py` to `plugins` folder under IDA Pro installation path or IDA Pro user path.
+Alternatively, copy `showcomments.py` to the `plugins` directory under your IDA Pro installation path or your IDA user directory.
 
-# Usage
+## Usage
 
-Select an `IDA View` tab in IDA and go to `Edit->Plugins->ShowComments` or just press `Ctrl`+`Alt`+`C`.
+From an IDA View, Hex View, or Pseudocode window, go to **Edit ▸ Plugins ▸ ShowComments** or press `Ctrl+Alt+C`.
 
-![gif](showcomments.gif)
+![Demo](showcomments.gif)
 
 ## Features
 
-- Support for regular and repeatable comments.
-- Double click an address to follow it in IDA View.
-- Click the table headers to sort.
+- Supports regular, repeatable, function, anterior, and posterior comments
+- Search and filter comments
+- Double-click an address to jump to it in IDA
+- Click table headers to sort columns
 
 ## FAQ
 
-1. How can I only show the user added comments?
+### 1. Can I filter only user-added comments?
 
-I found no way in IDA to find only this type of comments. A workaround is to always set repeatable comments and use ShowComments to sort by them.
+IDA does not currently provide an API to distinguish user-added comments from other types.
 
-2. Does it recognize function comments?
+As a workaround, you can use repeatable comments consistently and then sort by them in ShowComments.
 
-Yes.
+### 2. Which IDA versions are supported?
 
-3. What IDA versions are supported?
-
-I've tested it with 9.1 and 9.2, but it is possible it works with other versions too.
+The plugin has been tested with IDA versions >= 9.1. It may work with other versions, but this has not been verified.
