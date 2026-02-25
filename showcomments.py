@@ -77,7 +77,7 @@ class ShowComments(PluginForm):
         layout = QtWidgets.QVBoxLayout()
         # Create input for keyword
         self.filter_input = QtWidgets.QLineEdit(self.parent)
-        self.filter_input.setPlaceholderText("Search...")
+        self.filter_input.setPlaceholderText("Regular Expression Filter...")
         self.filter_input.returnPressed.connect(self.filter_comments)
         layout.addWidget(self.filter_input)
         # table 
@@ -155,7 +155,7 @@ class ShowComments(PluginForm):
         self.table.setModel(self.proxy_model)
         self.table.resizeColumnToContents(0)
         self.table.resizeColumnToContents(1)
-        self.table.resizeColumnToContents(2)
+        self.table.setColumnWidth(2, 300)
         self.table.horizontalHeader().setStretchLastSection(True)
 
     def fn_get_cell_Value(self, index):

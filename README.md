@@ -25,7 +25,7 @@ From an IDA View, Hex View, or Pseudocode window, go to **Edit ▸ Plugins ▸ S
 ## Features
 
 - Supports regular, repeatable, function, anterior, and posterior comments
-- Search and filter comments
+- Filter comments with regular expressions
 - Double-click an address to jump to it in IDA
 - Click table headers to sort columns
 
