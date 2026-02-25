@@ -3,7 +3,7 @@
   "plugin": {
     "name": "showcomments",
     "entryPoint": "showcomments.py",
-    "version": "0.5.2",
+    "version": "0.6.0",
     "idaVersions": ">=9.2",
     "description": "IDA Pro plugin to display and search comments in the database",
     "license": "GPL-3.0-or-later",

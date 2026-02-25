@@ -163,7 +163,7 @@ class ShowComments(PluginForm):
         if col == 0 or col == 2:
             row = index.row()
             addr_idx = index.model().index(row, 0)
-            
+
             try:
                 ida_kernwin.jumpto(int(addr_idx.data(), 16))
             except Exception:
@@ -174,7 +174,7 @@ class ShowComments(PluginForm):
 
 class showcomments_plugin_t(idaapi.plugin_t):
     comment = "ShowComments"
-    version = "0.5.2"
+    version = "0.6.0"
     website = "https://github.com/merces/showcomments"
     help = ""
     wanted_name = "ShowComments"
