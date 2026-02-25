@@ -1,9 +1,11 @@
-from idaapi import PluginForm
-import ida_kernwin
 from PyQt5 import QtCore, QtWidgets
-import idautils
+
+import ida_kernwin
 import idaapi
+import idautils
 import idc
+from idaapi import PluginForm
+
 
 try:
     from QtCore import QVariant
@@ -172,7 +174,7 @@ class ShowComments(PluginForm):
 
 class showcomments_plugin_t(idaapi.plugin_t):
     comment = "ShowComments"
-    version = "0.5.0"
+    version = "0.5.2"
     website = "https://github.com/merces/showcomments"
     help = ""
     wanted_name = "ShowComments"
